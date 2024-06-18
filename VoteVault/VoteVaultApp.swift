@@ -9,9 +9,10 @@ import SwiftUI
 
 @main
 struct VoteVaultApp: App {
+    @ObservedObject var partyStore = PartyStore()
     var body: some Scene {
         WindowGroup {
-            HomeView()
+            HomeView().environmentObject(self.partyStore)
         }
     }
 }

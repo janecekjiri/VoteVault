@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct DetailView: View {
+    @ObservedObject var viewModel: DetailViewModel
     @State private var selectedColor = Color.blue
     
     var body: some View {
@@ -151,5 +152,5 @@ struct DetailView: View {
 }
 
 #Preview {
-    DetailView()
+    DetailView(viewModel: DetailViewModel(model: nil))
 }
