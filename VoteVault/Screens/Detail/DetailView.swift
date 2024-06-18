@@ -16,7 +16,7 @@ struct DetailView: View {
             VStack(spacing: 0) {
                 // MARK: Name of political party
                 HStack {
-                    Text("Název strany")
+                    Text("party_name_title")
                         .font(.largeTitle)
                         .fontWeight(.bold)
                     
@@ -26,7 +26,7 @@ struct DetailView: View {
                 Spacer()
                     .frame(height: 10)
                 
-                TextField("Zadejte název strany", text: .constant("ODS"))
+                TextField("party_name_placeholder", text: .constant("ODS"))
                     .font(.title2)
                     .fontWeight(.semibold)
                     .padding(.vertical, 12)
@@ -46,7 +46,7 @@ struct DetailView: View {
                 
                 // MARK: Color of political party
                 HStack {
-                    Text("Barva strany")
+                    Text("party_color_title")
                         .font(.largeTitle)
                         .fontWeight(.bold)
                     
@@ -67,7 +67,7 @@ struct DetailView: View {
                     .frame(height: 5)
                 
                 HStack {
-                    Text("Klikněte na tlačítko s barvami pro výběr barvy.")
+                    Text("tap_on_button_to_open_color_picker")
                         .font(.footnote)
                     
                     Spacer()
@@ -78,7 +78,7 @@ struct DetailView: View {
                 
                 // MARK: Percents of political party
                 HStack {
-                    Text("Procenta")
+                    Text("percentages_title")
                         .font(.largeTitle)
                         .fontWeight(.bold)
                     
@@ -88,7 +88,7 @@ struct DetailView: View {
                 Spacer()
                     .frame(height: 10)
                 
-                TextField("Zadejte podporu strany v %", text: .constant("15,7"))
+                TextField("percentages_placeholder", text: .constant("15,7"))
                     .font(.title2)
                     .fontWeight(.semibold)
                     .padding(.vertical, 12)
@@ -107,7 +107,7 @@ struct DetailView: View {
                 
                 HStack {
                     Toggle(isOn: .constant(true), label: {
-                        Text("Koalice")
+                        Text("coalition_title")
                             .font(.largeTitle)
                             .fontWeight(.bold)
                     })
@@ -121,7 +121,7 @@ struct DetailView: View {
                     .frame(height: 5)
                 
                 HStack {
-                    Text("Značí, zda je o koalici. Ta potřebuje překročit hranici 7%, zatímco samostatná strana pouze 5%.")
+                    Text("coalition_description")
                         .font(.footnote)
                     
                     Spacer()
@@ -141,12 +141,12 @@ struct DetailView: View {
                 Button(
                     action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/,
                     label: {
-                        Text("Uložit")
+                        Text("save")
                             .foregroundStyle(Color(.label))
                 })
             }
         }
-        .navigationTitle("Detail")
+        .navigationTitle("detail_title")
         .navigationBarTitleDisplayMode(.inline)
     }
 }

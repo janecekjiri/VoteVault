@@ -16,6 +16,7 @@
 		1135F4B72C21A93800DB9E28 /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1135F4B62C21A93800DB9E28 /* DetailViewModel.swift */; };
 		1135F4B92C21AAD200DB9E28 /* PartyStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1135F4B82C21AAD200DB9E28 /* PartyStore.swift */; };
 		1135F4C02C21BB5000DB9E28 /* PartyRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1135F4BF2C21BB5000DB9E28 /* PartyRowView.swift */; };
+		11A9A9A72C22084A00DD5317 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 11A9A9A62C22084A00DD5317 /* Localizable.xcstrings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		1135F4B62C21A93800DB9E28 /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
 		1135F4B82C21AAD200DB9E28 /* PartyStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartyStore.swift; sourceTree = "<group>"; };
 		1135F4BF2C21BB5000DB9E28 /* PartyRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartyRowView.swift; sourceTree = "<group>"; };
+		11A9A9A62C22084A00DD5317 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +70,7 @@
 				1135F4A12C216B4500DB9E28 /* Assets.xcassets */,
 				1135F4A32C216B4500DB9E28 /* Preview Content */,
 				1135F4B82C21AAD200DB9E28 /* PartyStore.swift */,
+				11A9A9A62C22084A00DD5317 /* Localizable.xcstrings */,
 			);
 			path = VoteVault;
 			sourceTree = "<group>";
@@ -172,6 +175,7 @@
 			knownRegions = (
 				en,
 				Base,
+				cs,
 			);
 			mainGroup = 1135F4912C216B4400DB9E28;
 			productRefGroup = 1135F49B2C216B4400DB9E28 /* Products */;
@@ -190,6 +194,7 @@
 			files = (
 				1135F4A52C216B4500DB9E28 /* Preview Assets.xcassets in Resources */,
 				1135F4A22C216B4500DB9E28 /* Assets.xcassets in Resources */,
+				11A9A9A72C22084A00DD5317 /* Localizable.xcstrings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

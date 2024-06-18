@@ -16,7 +16,7 @@ struct HomeView: View {
         NavigationStack {
             ZStack {
                 if self.partyStore.parties.isEmpty {
-                    Text("Přidejte nové politické strany tapnutím na tlačítko + v pravém horním rohu.")
+                    Text("home_view_empty_message")
                         .font(.title3)
                         .fontWeight(.semibold)
                 } else {
@@ -36,7 +36,7 @@ struct HomeView: View {
                                 // TODO: Vyhodnotit
                             },
                             label: {
-                                Text("Vyhodnotit")
+                                Text("evaluate")
                                     .font(.title2)
                                     .fontWeight(.semibold)
                                     .foregroundStyle(self.partyStore.isPercentageSumCorrect ? Color.white : Color(.systemGray2))
@@ -76,7 +76,7 @@ struct HomeView: View {
                 }
             }
             .alert(
-                "Chcete vážně smazat všechny strany?",
+                "alert_delete_all_parties_title",
                 isPresented: self.$isDeleteAllAlertVisible,
                 actions: {
                     Button(
@@ -84,19 +84,19 @@ struct HomeView: View {
                         action: {
                             self.isDeleteAllAlertVisible = false
                         }) {
-                            Text("Ne")
+                            Text("no")
                         }
                     
                     Button {
                         self.partyStore.deleteAll()
                         self.isDeleteAllAlertVisible = false
                     } label: {
-                        Text("Ano")
+                        Text("yes")
                     }
 
                 },
                 message: {
-                    Text("Tato akce má nevratné následky.")
+                    Text("alert_delete_all_parties_message")
                 }
             )
             .tint(Color(.label))
