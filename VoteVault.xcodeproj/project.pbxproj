@@ -17,7 +17,18 @@
 		1135F4B92C21AAD200DB9E28 /* PartyStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1135F4B82C21AAD200DB9E28 /* PartyStore.swift */; };
 		1135F4C02C21BB5000DB9E28 /* PartyRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1135F4BF2C21BB5000DB9E28 /* PartyRowView.swift */; };
 		11A9A9A72C22084A00DD5317 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 11A9A9A62C22084A00DD5317 /* Localizable.xcstrings */; };
+		11A9A9B82C22153A00DD5317 /* PartyStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A9A9B72C22153A00DD5317 /* PartyStoreTests.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		11A9A9B22C22150F00DD5317 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1135F4922C216B4400DB9E28 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1135F4992C216B4400DB9E28;
+			remoteInfo = VoteVault;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		1135F49A2C216B4400DB9E28 /* VoteVault.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VoteVault.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -31,10 +42,19 @@
 		1135F4B82C21AAD200DB9E28 /* PartyStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartyStore.swift; sourceTree = "<group>"; };
 		1135F4BF2C21BB5000DB9E28 /* PartyRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartyRowView.swift; sourceTree = "<group>"; };
 		11A9A9A62C22084A00DD5317 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
+		11A9A9AE2C22150F00DD5317 /* VoteVaultTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VoteVaultTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		11A9A9B72C22153A00DD5317 /* PartyStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartyStoreTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		1135F4972C216B4400DB9E28 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		11A9A9AB2C22150F00DD5317 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -48,6 +68,7 @@
 			isa = PBXGroup;
 			children = (
 				1135F49C2C216B4400DB9E28 /* VoteVault */,
+				11A9A9AF2C22150F00DD5317 /* VoteVaultTests */,
 				1135F49B2C216B4400DB9E28 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -56,6 +77,7 @@
 			isa = PBXGroup;
 			children = (
 				1135F49A2C216B4400DB9E28 /* VoteVault.app */,
+				11A9A9AE2C22150F00DD5317 /* VoteVaultTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -133,6 +155,14 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		11A9A9AF2C22150F00DD5317 /* VoteVaultTests */ = {
+			isa = PBXGroup;
+			children = (
+				11A9A9B72C22153A00DD5317 /* PartyStoreTests.swift */,
+			);
+			path = VoteVaultTests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -153,6 +183,24 @@
 			productReference = 1135F49A2C216B4400DB9E28 /* VoteVault.app */;
 			productType = "com.apple.product-type.application";
 		};
+		11A9A9AD2C22150F00DD5317 /* VoteVaultTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 11A9A9B62C22150F00DD5317 /* Build configuration list for PBXNativeTarget "VoteVaultTests" */;
+			buildPhases = (
+				11A9A9AA2C22150F00DD5317 /* Sources */,
+				11A9A9AB2C22150F00DD5317 /* Frameworks */,
+				11A9A9AC2C22150F00DD5317 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				11A9A9B32C22150F00DD5317 /* PBXTargetDependency */,
+			);
+			name = VoteVaultTests;
+			productName = VoteVaultTests;
+			productReference = 11A9A9AE2C22150F00DD5317 /* VoteVaultTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -165,6 +213,11 @@
 				TargetAttributes = {
 					1135F4992C216B4400DB9E28 = {
 						CreatedOnToolsVersion = 15.1;
+					};
+					11A9A9AD2C22150F00DD5317 = {
+						CreatedOnToolsVersion = 15.1;
+						LastSwiftMigration = 1510;
+						TestTargetID = 1135F4992C216B4400DB9E28;
 					};
 				};
 			};
@@ -183,6 +236,7 @@
 			projectRoot = "";
 			targets = (
 				1135F4992C216B4400DB9E28 /* VoteVault */,
+				11A9A9AD2C22150F00DD5317 /* VoteVaultTests */,
 			);
 		};
 /* End PBXProject section */
@@ -195,6 +249,13 @@
 				1135F4A52C216B4500DB9E28 /* Preview Assets.xcassets in Resources */,
 				1135F4A22C216B4500DB9E28 /* Assets.xcassets in Resources */,
 				11A9A9A72C22084A00DD5317 /* Localizable.xcstrings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		11A9A9AC2C22150F00DD5317 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -215,7 +276,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		11A9A9AA2C22150F00DD5317 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				11A9A9B82C22153A00DD5317 /* PartyStoreTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		11A9A9B32C22150F00DD5317 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1135F4992C216B4400DB9E28 /* VoteVault */;
+			targetProxy = 11A9A9B22C22150F00DD5317 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		1135F4A62C216B4500DB9E28 /* Debug */ = {
@@ -395,6 +472,45 @@
 			};
 			name = Release;
 		};
+		11A9A9B42C22150F00DD5317 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = LSX73KEXNV;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.weebly.janecek.VoteVaultTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/VoteVault.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/VoteVault";
+			};
+			name = Debug;
+		};
+		11A9A9B52C22150F00DD5317 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = LSX73KEXNV;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.weebly.janecek.VoteVaultTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/VoteVault.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/VoteVault";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -412,6 +528,15 @@
 			buildConfigurations = (
 				1135F4A92C216B4500DB9E28 /* Debug */,
 				1135F4AA2C216B4500DB9E28 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		11A9A9B62C22150F00DD5317 /* Build configuration list for PBXNativeTarget "VoteVaultTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				11A9A9B42C22150F00DD5317 /* Debug */,
+				11A9A9B52C22150F00DD5317 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
