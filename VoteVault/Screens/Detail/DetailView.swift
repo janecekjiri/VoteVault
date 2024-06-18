@@ -11,144 +11,142 @@ struct DetailView: View {
     @State private var selectedColor = Color.blue
     
     var body: some View {
-        NavigationStack {
-            ScrollView {
-                VStack(spacing: 0) {
-                    // MARK: Name of political party
-                    HStack {
-                        Text("Název strany")
-                            .font(.largeTitle)
-                            .fontWeight(.bold)
-                        
-                        Spacer()
-                    }
+        ScrollView {
+            VStack(spacing: 0) {
+                // MARK: Name of political party
+                HStack {
+                    Text("Název strany")
+                        .font(.largeTitle)
+                        .fontWeight(.bold)
                     
                     Spacer()
-                        .frame(height: 10)
-                    
-                    TextField("Zadejte název strany", text: .constant("ODS"))
-                        .font(.title2)
-                        .fontWeight(.semibold)
-                        .padding(.vertical, 12)
-                        .padding(.horizontal, 10)
-                        .background(
-                            RoundedRectangle(cornerRadius: 5)
-                                .foregroundStyle(Color(.systemGray6))
-                        )
-                        .overlay {
-                            RoundedRectangle(cornerRadius: 5)
-                                .stroke(Color.black, lineWidth: 1)
-                        }
-                    
-                    // Additional spacing of 10
-                    Spacer()
-                        .frame(height: 20)
-                    
-                    // MARK: Color of political party
-                    HStack {
-                        Text("Barva strany")
-                            .font(.largeTitle)
-                            .fontWeight(.bold)
-                        
-                        Spacer()
-                    }
-                    
-                    ColorPicker(selection: self.$selectedColor, supportsOpacity: false, label: {
+                }
+                
+                Spacer()
+                    .frame(height: 10)
+                
+                TextField("Zadejte název strany", text: .constant("ODS"))
+                    .font(.title2)
+                    .fontWeight(.semibold)
+                    .padding(.vertical, 12)
+                    .padding(.horizontal, 10)
+                    .background(
                         RoundedRectangle(cornerRadius: 5)
-                            .frame(height: 50)
-                            .foregroundStyle(self.selectedColor)
-                            .overlay {
-                                RoundedRectangle(cornerRadius: 5)
-                                    .stroke(Color.black, lineWidth: 1)
-                            }
-                    })
-                    
-                    Spacer()
-                        .frame(height: 5)
-                    
-                    HStack {
-                        Text("Klikněte na tlačítko s barvami pro výběr barvy.")
-                            .font(.footnote)
-                        
-                        Spacer()
+                            .foregroundStyle(Color(.systemGray6))
+                    )
+                    .overlay {
+                        RoundedRectangle(cornerRadius: 5)
+                            .stroke(Color.black, lineWidth: 1)
                     }
+                
+                // Additional spacing of 10
+                Spacer()
+                    .frame(height: 20)
+                
+                // MARK: Color of political party
+                HStack {
+                    Text("Barva strany")
+                        .font(.largeTitle)
+                        .fontWeight(.bold)
                     
                     Spacer()
-                        .frame(height: 20)
-                    
-                    // MARK: Percents of political party
-                    HStack {
-                        Text("Procenta")
-                            .font(.largeTitle)
-                            .fontWeight(.bold)
-                        
-                        Spacer()
-                    }
-                    
-                    Spacer()
-                        .frame(height: 10)
-                    
-                    TextField("Zadejte podporu strany v %", text: .constant("15,7"))
-                        .font(.title2)
-                        .fontWeight(.semibold)
-                        .padding(.vertical, 12)
-                        .padding(.horizontal, 10)
-                        .background(
-                            RoundedRectangle(cornerRadius: 5)
-                                .foregroundStyle(Color(.systemGray6))
-                        )
+                }
+                
+                ColorPicker(selection: self.$selectedColor, supportsOpacity: false, label: {
+                    RoundedRectangle(cornerRadius: 5)
+                        .frame(height: 50)
+                        .foregroundStyle(self.selectedColor)
                         .overlay {
                             RoundedRectangle(cornerRadius: 5)
                                 .stroke(Color.black, lineWidth: 1)
                         }
+                })
+                
+                Spacer()
+                    .frame(height: 5)
+                
+                HStack {
+                    Text("Klikněte na tlačítko s barvami pro výběr barvy.")
+                        .font(.footnote)
                     
                     Spacer()
-                        .frame(height: 20)
-                    
-                    HStack {
-                        Toggle(isOn: .constant(true), label: {
-                            Text("Koalice")
-                                .font(.largeTitle)
-                                .fontWeight(.bold)
-                        })
-                        
-                        // For some reason, without this code the toggle will be partially outside of the bounds
-                        Spacer()
-                            .frame(width: 2)
-                    }
+                }
+                
+                Spacer()
+                    .frame(height: 20)
+                
+                // MARK: Percents of political party
+                HStack {
+                    Text("Procenta")
+                        .font(.largeTitle)
+                        .fontWeight(.bold)
                     
                     Spacer()
-                        .frame(height: 5)
-                    
-                    HStack {
-                        Text("Značí, zda je o koalici. Ta potřebuje překročit hranici 7%, zatímco samostatná strana pouze 5%.")
-                            .font(.footnote)
-                        
-                        Spacer()
+                }
+                
+                Spacer()
+                    .frame(height: 10)
+                
+                TextField("Zadejte podporu strany v %", text: .constant("15,7"))
+                    .font(.title2)
+                    .fontWeight(.semibold)
+                    .padding(.vertical, 12)
+                    .padding(.horizontal, 10)
+                    .background(
+                        RoundedRectangle(cornerRadius: 5)
+                            .foregroundStyle(Color(.systemGray6))
+                    )
+                    .overlay {
+                        RoundedRectangle(cornerRadius: 5)
+                            .stroke(Color.black, lineWidth: 1)
                     }
-                }
-            }
-            .padding([.leading, .trailing, .bottom], 20)
-            .toolbar {
-                ToolbarItemGroup(placement: .topBarTrailing) {
-                    Button(
-                        action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/,
-                        label: {
-                            Image(systemName: "trash")
-                                .tint(Color(.label))
+                
+                Spacer()
+                    .frame(height: 20)
+                
+                HStack {
+                    Toggle(isOn: .constant(true), label: {
+                        Text("Koalice")
+                            .font(.largeTitle)
+                            .fontWeight(.bold)
                     })
                     
-                    Button(
-                        action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/,
-                        label: {
-                            Text("Uložit")
-                                .foregroundStyle(Color(.label))
-                    })
+                    // For some reason, without this code the toggle will be partially outside of the bounds
+                    Spacer()
+                        .frame(width: 2)
+                }
+                
+                Spacer()
+                    .frame(height: 5)
+                
+                HStack {
+                    Text("Značí, zda je o koalici. Ta potřebuje překročit hranici 7%, zatímco samostatná strana pouze 5%.")
+                        .font(.footnote)
+                    
+                    Spacer()
                 }
             }
-            .navigationTitle("Detail")
-            .navigationBarTitleDisplayMode(.inline)
         }
+        .padding([.leading, .trailing, .bottom], 20)
+        .toolbar {
+            ToolbarItemGroup(placement: .topBarTrailing) {
+                Button(
+                    action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/,
+                    label: {
+                        Image(systemName: "trash")
+                            .tint(Color(.label))
+                })
+                
+                Button(
+                    action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/,
+                    label: {
+                        Text("Uložit")
+                            .foregroundStyle(Color(.label))
+                })
+            }
+        }
+        .navigationTitle("Detail")
+        .navigationBarTitleDisplayMode(.inline)
     }
 }
 
