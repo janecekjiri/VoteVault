@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct DetailView: View {
+    @State private var selectedColor = Color.blue
+    
     var body: some View {
         NavigationStack {
             ScrollView {
@@ -51,28 +53,15 @@ struct DetailView: View {
                         Spacer()
                     }
                     
-                    HStack(spacing: 5) {
+                    ColorPicker(selection: self.$selectedColor, supportsOpacity: false, label: {
                         RoundedRectangle(cornerRadius: 5)
                             .frame(height: 50)
-                            .foregroundStyle(.blue)
+                            .foregroundStyle(self.selectedColor)
                             .overlay {
                                 RoundedRectangle(cornerRadius: 5)
                                     .stroke(Color.black, lineWidth: 1)
                             }
-                        
-                        Button(
-                            action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/,
-                            label: {
-                                Image("color-wheel")
-                                    .resizable()
-                                    .frame(width: 40, height: 40)
-                                    .padding(5)
-                                    .background(
-                                        RoundedRectangle(cornerRadius: 5)
-                                            .foregroundStyle(Color(.systemGray6))
-                                    )
-                        })
-                    }
+                    })
                     
                     Spacer()
                         .frame(height: 5)
@@ -99,7 +88,7 @@ struct DetailView: View {
                     Spacer()
                         .frame(height: 10)
                     
-                    TextField("Zadejte název strany", text: .constant("15,7"))
+                    TextField("Zadejte podporu strany v %", text: .constant("15,7"))
                         .font(.title2)
                         .fontWeight(.semibold)
                         .padding(.vertical, 12)
@@ -118,7 +107,7 @@ struct DetailView: View {
                     
                     HStack {
                         Toggle(isOn: .constant(true), label: {
-                            Text("Koaliace")
+                            Text("Koalice")
                                 .font(.largeTitle)
                                 .fontWeight(.bold)
                         })
@@ -132,7 +121,7 @@ struct DetailView: View {
                         .frame(height: 5)
                     
                     HStack {
-                        Text("Značí, zda je o koalici. Ta potřebuje překročit hranici 7%, zatímco jednotlivá strana pouze 5%.")
+                        Text("Značí, zda je o koalici. Ta potřebuje překročit hranici 7%, zatímco samostatná strana pouze 5%.")
                             .font(.footnote)
                         
                         Spacer()
