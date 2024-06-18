@@ -18,7 +18,7 @@ struct HomeView: View {
                         .fontWeight(.semibold)
                 } else {
                     List(self.partyStore.parties, id: \.name) { party in
-                        PartyRowView()
+                        PartyRowView(model: party)
                             .listRowSeparator(.hidden)
                             .listRowInsets(.init(top: 0, leading: 0, bottom: 0, trailing: 0))
                     }
@@ -71,35 +71,4 @@ struct HomeView: View {
 
 #Preview {
     HomeView().environmentObject(PartyStore())
-}
-
-private struct PartyRowView: View {
-    var body: some View {
-        HStack {
-            Text("ODS")
-                .font(.largeTitle)
-                .fontWeight(.bold)
-            
-            Spacer(minLength: 10)
-            
-            RoundedRectangle(cornerRadius: 5)
-                .frame(width: 30, height: 30)
-                .foregroundStyle(.blue)
-            
-            Spacer()
-                .frame(width: 10)
-            
-            Text("15,6%")
-                .font(.title2)
-                .fontWeight(.semibold)
-                .multilineTextAlignment(.trailing)
-        }
-        .padding(.horizontal, 10)
-        .padding(.vertical, 5)
-        // note: takto udělané pozadí? smart! :)
-        .background(
-            RoundedRectangle(cornerRadius: 5)
-                .foregroundStyle(Color(.systemGray6))
-        )
-    }
 }

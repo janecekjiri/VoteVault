@@ -14,6 +14,11 @@ final class PartyModel: ObservableObject {
     @Published var color = Color.blue
     @Published var isCoaliton = false
     
+    var formattedPercentsValue: String {
+        let value = self.percents ?? 0.0
+        return value.formatted(.number.precision(.fractionLength(0...1)))
+    }
+    
     init(name: String? = nil, percents: Double? = nil, color: Color = .blue, isCoaliton: Bool = false) {
         self.name = name
         self.percents = percents

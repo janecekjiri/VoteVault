@@ -15,6 +15,7 @@
 		1135F4B52C21A7F700DB9E28 /* PartyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1135F4B42C21A7F700DB9E28 /* PartyModel.swift */; };
 		1135F4B72C21A93800DB9E28 /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1135F4B62C21A93800DB9E28 /* DetailViewModel.swift */; };
 		1135F4B92C21AAD200DB9E28 /* PartyStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1135F4B82C21AAD200DB9E28 /* PartyStore.swift */; };
+		1135F4C02C21BB5000DB9E28 /* PartyRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1135F4BF2C21BB5000DB9E28 /* PartyRowView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		1135F4B42C21A7F700DB9E28 /* PartyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartyModel.swift; sourceTree = "<group>"; };
 		1135F4B62C21A93800DB9E28 /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
 		1135F4B82C21AAD200DB9E28 /* PartyStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartyStore.swift; sourceTree = "<group>"; };
+		1135F4BF2C21BB5000DB9E28 /* PartyRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartyRowView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 			isa = PBXGroup;
 			children = (
 				1135F49D2C216B4400DB9E28 /* VoteVaultApp.swift */,
+				1135F4BE2C21BB4700DB9E28 /* Views */,
 				1135F4AB2C216B5F00DB9E28 /* Screens */,
 				1135F4B32C21A7E900DB9E28 /* Models */,
 				1135F4A12C216B4500DB9E28 /* Assets.xcassets */,
@@ -117,6 +120,14 @@
 				1135F4B42C21A7F700DB9E28 /* PartyModel.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		1135F4BE2C21BB4700DB9E28 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1135F4BF2C21BB5000DB9E28 /* PartyRowView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -193,6 +204,7 @@
 				1135F4B02C216B8300DB9E28 /* HomeView.swift in Sources */,
 				1135F4B22C217F8000DB9E28 /* DetailView.swift in Sources */,
 				1135F4B52C21A7F700DB9E28 /* PartyModel.swift in Sources */,
+				1135F4C02C21BB5000DB9E28 /* PartyRowView.swift in Sources */,
 				1135F4B72C21A93800DB9E28 /* DetailViewModel.swift in Sources */,
 				1135F49E2C216B4400DB9E28 /* VoteVaultApp.swift in Sources */,
 			);
