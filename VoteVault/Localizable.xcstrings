@@ -1,6 +1,54 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
+    "%@ %@ party_row_value" : {
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Strana %1$@ s %2$@ procenty."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Party %1$@ with %2$@ percents."
+          }
+        }
+      }
+    },
+    "add_toolbar_hint" : {
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Otevře obrazovku pro přidání strany"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Opens new screen to add a part"
+          }
+        }
+      }
+    },
+    "add_toolbar_value" : {
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Přidat stranu"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Add a party"
+          }
+        }
+      }
+    },
     "alert_delete_all_parties_message" : {
       "localizations" : {
         "cs" : {
@@ -61,6 +109,38 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Coalition"
+          }
+        }
+      }
+    },
+    "delete_toolbar_hint" : {
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Otevře dialog pro potvrzení smazání všech stran"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Opens dialog to confirm deletion of all parties"
+          }
+        }
+      }
+    },
+    "delete_toolbar_value" : {
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Smazat všechny strany"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Delete all parties"
           }
         }
       }
@@ -173,6 +253,16 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Party name"
+          }
+        }
+      }
+    },
+    "party_row_hint" : {
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Otevře obrazovku na úpravu dat v tomto záznamu."
           }
         }
       }

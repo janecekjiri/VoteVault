@@ -39,6 +39,10 @@ struct PartyRowView: View {
                 RoundedRectangle(cornerRadius: 5)
                     .foregroundStyle(Color(.systemGray6))
             )
+            .accessibilityElement()
+            .accessibilityAddTraits(.isButton)
+            .accessibilityValue("\(self.model.name ?? "") \(self.model.formattedPercentsValue) party_row_value")
+            .accessibilityHint("party_row_hint")
         }
     }
     

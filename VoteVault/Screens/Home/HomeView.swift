@@ -61,6 +61,9 @@ struct HomeView: View {
                             label: {
                                 Image(systemName: "trash")
                         })
+                        .accessibilityElement()
+                        .accessibilityValue("delete_toolbar_value")
+                        .accessibilityHint("delete_toolbar_hint")
                     }
                 }
                 
@@ -73,6 +76,9 @@ struct HomeView: View {
                         label: {
                             Image(systemName: "plus.circle")
                     })
+                    .accessibilityElement()
+                    .accessibilityValue("add_toolbar_value")
+                    .accessibilityHint("add_toolbar_hint")
                 }
             }
             .alert(
