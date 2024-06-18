@@ -32,18 +32,21 @@ struct HomeView: View {
                         Spacer()
                         
                         Button(
-                            action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/,
+                            action: {
+                                // TODO: Vyhodnotit
+                            },
                             label: {
                                 Text("Vyhodnotit")
                                     .font(.title2)
                                     .fontWeight(.semibold)
-                                    .foregroundStyle(.white)
+                                    .foregroundStyle(self.partyStore.isPercentageSumCorrect ? Color.white : Color(.systemGray2))
                                     .padding(.vertical, 12)
                                     .frame(maxWidth: .infinity)
-                                    .background(.blue)
+                                    .background(self.partyStore.isPercentageSumCorrect ? Color.blue : Color(.systemGray6))
                                     .clipShape(.capsule)
                                 // note: měl jsem zřejmě špatné pořadí modifikátorů
                         })
+                        .disabled(!self.partyStore.isPercentageSumCorrect)
                     }
                 }
             }
@@ -63,7 +66,10 @@ struct HomeView: View {
                 
                 ToolbarItem(placement: .topBarTrailing) {
                     Button(
-                        action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/,
+                        action: {
+                            // TODO: Zobrazit modál k vytvoření strany
+                            self.partyStore.change()
+                        },
                         label: {
                             Image(systemName: "plus.circle")
                     })
