@@ -27,10 +27,7 @@ struct HomeView: View {
                     }
                     .listStyle(.plain)
                     .listRowSpacing(10)
-                    
-                    VStack {
-                        Spacer()
-                        
+                    .safeAreaInset(edge: .bottom) {
                         Button(
                             action: {
                                 // TODO: Vyhodnotit
@@ -47,10 +44,11 @@ struct HomeView: View {
                                 // note: měl jsem zřejmě špatné pořadí modifikátorů
                         })
                         .disabled(!self.partyStore.isPercentageSumCorrect)
+                        .accessibilityHint("evaluate_hint")
                     }
                 }
             }
-            .padding(20)
+            .padding([.leading, .trailing, .bottom], 20)
             .toolbar {
                 if !self.partyStore.parties.isEmpty {
                     ToolbarItem(placement: .topBarLeading) {

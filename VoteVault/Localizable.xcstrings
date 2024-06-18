@@ -177,6 +177,22 @@
         }
       }
     },
+    "evaluate_hint" : {
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zobrazí, kolik mandátů získá každá strana."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Shows how many mandates each party gets."
+          }
+        }
+      }
+    },
     "home_view_empty_message" : {
       "localizations" : {
         "cs" : {
