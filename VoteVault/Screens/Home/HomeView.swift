@@ -9,6 +9,9 @@ import SwiftUI
 
 struct HomeView: View {
     @EnvironmentObject var partyStore: PartyStore
+    
+    @State private var isDeleteAllAlertVisible = false
+    
     var body: some View {
         NavigationStack {
             ZStack {
@@ -49,7 +52,9 @@ struct HomeView: View {
                 if !self.partyStore.parties.isEmpty {
                     ToolbarItem(placement: .topBarLeading) {
                         Button(
-                            action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/,
+                            action: {
+                                self.isDeleteAllAlertVisible = true
+                            },
                             label: {
                                 Image(systemName: "trash")
                         })
@@ -64,6 +69,30 @@ struct HomeView: View {
                     })
                 }
             }
+            .alert(
+                "Chcete vážně smazat všechny strany?",
+                isPresented: self.$isDeleteAllAlertVisible,
+                actions: {
+                    Button(
+                        role: .cancel,
+                        action: {
+                            self.isDeleteAllAlertVisible = false
+                        }) {
+                            Text("Ne")
+                        }
+                    
+                    Button {
+                        self.partyStore.deleteAll()
+                        self.isDeleteAllAlertVisible = false
+                    } label: {
+                        Text("Ano")
+                    }
+
+                },
+                message: {
+                    Text("Tato akce má nevratné následky.")
+                }
+            )
             .tint(Color(.label))
         }
     }

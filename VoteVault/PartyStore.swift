@@ -13,4 +13,8 @@ final class PartyStore: ObservableObject {
         PartyModel(name: "ANO", percents: 33.4, color: .purple, isCoaliton: false),
         PartyModel(name: "Piráti", percents: 9.8, color: .black, isCoaliton: false)
     ]
+    
+    func deleteAll() {
+        self.parties.removeAll()
+    }
 }
