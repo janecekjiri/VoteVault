@@ -8,7 +8,11 @@
 import Foundation
 import SwiftUI
 
-final class PartyModel: ObservableObject {
+final class PartyModel: ObservableObject, Hashable {
+    static func == (lhs: PartyModel, rhs: PartyModel) -> Bool {
+        return lhs.name == rhs.name
+    }
+    
     @Published var name: String? = nil
     @Published var percents: Double? = nil
     @Published var color = Color.blue
@@ -24,5 +28,12 @@ final class PartyModel: ObservableObject {
         self.percents = percents
         self.color = color
         self.isCoaliton = isCoaliton
+    }
+    
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(self.name)
+        hasher.combine(self.percents)
+        hasher.combine(self.color)
+        hasher.combine(self.isCoaliton)
     }
 }

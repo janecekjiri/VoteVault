@@ -21,9 +21,16 @@ struct HomeView: View {
                         .fontWeight(.semibold)
                 } else {
                     List(self.partyStore.parties, id: \.name) { party in
-                        PartyRowView(model: party)
-                            .listRowSeparator(.hidden)
-                            .listRowInsets(.init(top: 0, leading: 0, bottom: 0, trailing: 0))
+                        ZStack {
+                            PartyRowView(model: party)
+                            
+                            NavigationLink(value: party) {
+                                EmptyView()
+                            }
+                            .opacity(0)
+                        }
+                        .listRowSeparator(.hidden)
+                        .listRowInsets(.init(top: 0, leading: 0, bottom: 0, trailing: 0))
                     }
                     .listStyle(.plain)
                     .listRowSpacing(10)
@@ -45,6 +52,9 @@ struct HomeView: View {
                         })
                         .disabled(!self.partyStore.isPercentageSumCorrect)
                         .accessibilityHint("evaluate_hint")
+                    }
+                    .navigationDestination(for: PartyModel.self) { party in
+                        DetailView(viewModel: DetailViewModel(model: party))
                     }
                 }
             }
