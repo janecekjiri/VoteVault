@@ -13,17 +13,16 @@ final class PartyModel: ObservableObject, Hashable {
         return lhs.name == rhs.name
     }
     
-    @Published var name: String? = nil
-    @Published var percents: Double? = nil
+    @Published var name: String
+    @Published var percents: Double
     @Published var color = Color.blue
     @Published var isCoaliton = false
     
     var formattedPercentsValue: String {
-        let value = self.percents ?? 0.0
-        return value.formatted(.number.precision(.fractionLength(0...1)))
+        return self.percents.formatted(.number.precision(.fractionLength(0...1)))
     }
     
-    init(name: String? = nil, percents: Double? = nil, color: Color = .blue, isCoaliton: Bool = false) {
+    init(name: String = "", percents: Double = 0.0, color: Color = .blue, isCoaliton: Bool = false) {
         self.name = name
         self.percents = percents
         self.color = color

@@ -18,6 +18,10 @@
 		1135F4C02C21BB5000DB9E28 /* PartyRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1135F4BF2C21BB5000DB9E28 /* PartyRowView.swift */; };
 		11A9A9A72C22084A00DD5317 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 11A9A9A62C22084A00DD5317 /* Localizable.xcstrings */; };
 		11A9A9B82C22153A00DD5317 /* PartyStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A9A9B72C22153A00DD5317 /* PartyStoreTests.swift */; };
+		11B31F582C22E22B008EC9CC /* PartyNameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B31F572C22E22B008EC9CC /* PartyNameView.swift */; };
+		11B31F5A2C22F2A7008EC9CC /* PartyColorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B31F592C22F2A7008EC9CC /* PartyColorView.swift */; };
+		11B31F5C2C22F602008EC9CC /* PartyPercentagesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B31F5B2C22F602008EC9CC /* PartyPercentagesView.swift */; };
+		11B31F5E2C22F724008EC9CC /* PartyCoalitionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B31F5D2C22F724008EC9CC /* PartyCoalitionView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +48,10 @@
 		11A9A9A62C22084A00DD5317 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		11A9A9AE2C22150F00DD5317 /* VoteVaultTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VoteVaultTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		11A9A9B72C22153A00DD5317 /* PartyStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartyStoreTests.swift; sourceTree = "<group>"; };
+		11B31F572C22E22B008EC9CC /* PartyNameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartyNameView.swift; sourceTree = "<group>"; };
+		11B31F592C22F2A7008EC9CC /* PartyColorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartyColorView.swift; sourceTree = "<group>"; };
+		11B31F5B2C22F602008EC9CC /* PartyPercentagesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartyPercentagesView.swift; sourceTree = "<group>"; };
+		11B31F5D2C22F724008EC9CC /* PartyCoalitionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartyCoalitionView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,6 +159,10 @@
 			isa = PBXGroup;
 			children = (
 				1135F4BF2C21BB5000DB9E28 /* PartyRowView.swift */,
+				11B31F572C22E22B008EC9CC /* PartyNameView.swift */,
+				11B31F592C22F2A7008EC9CC /* PartyColorView.swift */,
+				11B31F5B2C22F602008EC9CC /* PartyPercentagesView.swift */,
+				11B31F5D2C22F724008EC9CC /* PartyCoalitionView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -268,9 +280,13 @@
 			files = (
 				1135F4B92C21AAD200DB9E28 /* PartyStore.swift in Sources */,
 				1135F4B02C216B8300DB9E28 /* HomeView.swift in Sources */,
+				11B31F582C22E22B008EC9CC /* PartyNameView.swift in Sources */,
 				1135F4B22C217F8000DB9E28 /* DetailView.swift in Sources */,
+				11B31F5E2C22F724008EC9CC /* PartyCoalitionView.swift in Sources */,
 				1135F4B52C21A7F700DB9E28 /* PartyModel.swift in Sources */,
+				11B31F5A2C22F2A7008EC9CC /* PartyColorView.swift in Sources */,
 				1135F4C02C21BB5000DB9E28 /* PartyRowView.swift in Sources */,
+				11B31F5C2C22F602008EC9CC /* PartyPercentagesView.swift in Sources */,
 				1135F4B72C21A93800DB9E28 /* DetailViewModel.swift in Sources */,
 				1135F49E2C216B4400DB9E28 /* VoteVaultApp.swift in Sources */,
 			);
