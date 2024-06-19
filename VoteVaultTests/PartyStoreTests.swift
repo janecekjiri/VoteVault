@@ -40,5 +40,33 @@ final class PartyStoreTests: XCTestCase {
         self.partyStore.assignB()
         XCTAssertFalse(self.partyStore.isPercentageSumCorrect)
     }
+    
+    func test_whenPartyIsAdded_thereIsOneParty() {
+        self.partyStore.addParty(PartyModel(name: "ODS", percents: 14.7, color: .blue, isCoaliton: false))
+        XCTAssertTrue(self.partyStore.parties.count == 1)
+    }
+    
+    func test_whenPartyIsRemoved_thereIsNoParty() {
+        let party = PartyModel(name: "ODS", percents: 14.7, color: .blue, isCoaliton: false)
+        self.partyStore.addParty(party)
+        self.partyStore.removeParty(party)
+        XCTAssertTrue(self.partyStore.parties.count == 0)
+    }
+    
+    func test_whenNotSavedPartyIsRemoved_partiesCountDoesNotChange() {
+        let party = PartyModel(name: "ODS", percents: 14.7, color: .blue, isCoaliton: false)
+        let party2 = PartyModel(name: "ANO", percents: 33.7, color: .purple, isCoaliton: false)
+        self.partyStore.addParty(party)
+        self.partyStore.removeParty(party2)
+        XCTAssertTrue(self.partyStore.parties.count == 1)
+    }
+    
+    func test_whenSamePartyIsAdded_partiesCountDoesNotChange() {
+        var party = PartyModel(name: "ODS", percents: 14.7, color: .blue, isCoaliton: false)
+        self.partyStore.addParty(party)
+        party.percents = 15.8
+        self.partyStore.addParty(party)
+        XCTAssertTrue(self.partyStore.parties.count == 1)
+    }
 
 }
