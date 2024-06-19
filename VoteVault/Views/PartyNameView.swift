@@ -15,6 +15,8 @@ struct PartyNameView: View {
                 Text("party_name_title")
                     .font(.largeTitle)
                     .fontWeight(.bold)
+                    .accessibilityRemoveTraits(.isStaticText)
+                    .accessibilityAddTraits(.isHeader)
                 
                 Spacer()
             }
@@ -33,8 +35,9 @@ struct PartyNameView: View {
                 )
                 .overlay {
                     RoundedRectangle(cornerRadius: 5)
-                        .stroke(Color.black, lineWidth: 1)
+                        .stroke(Color(.label), lineWidth: 1)
                 }
+                .accessibilityLabel("party_name_label")
         }
     }
 }

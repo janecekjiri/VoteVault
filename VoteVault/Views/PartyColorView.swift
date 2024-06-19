@@ -16,6 +16,8 @@ struct PartyColorView: View {
                 Text("party_color_title")
                     .font(.largeTitle)
                     .fontWeight(.bold)
+                    .accessibilityRemoveTraits(.isStaticText)
+                    .accessibilityAddTraits(.isHeader)
                 
                 Spacer()
             }
@@ -29,9 +31,11 @@ struct PartyColorView: View {
                     .foregroundStyle(self.selectedColor)
                     .overlay {
                         RoundedRectangle(cornerRadius: 5)
-                            .stroke(Color.black, lineWidth: 1)
+                            .stroke(Color(.label), lineWidth: 1)
                     }
             })
+            .accessibilityLabel("color_picker_label")
+            .accessibilityHint("color_picker_hint")
             
             Spacer()
                 .frame(height: 5)
@@ -39,6 +43,7 @@ struct PartyColorView: View {
             HStack {
                 Text("tap_on_button_to_open_color_picker")
                     .font(.footnote)
+                    .accessibilityLabel("tap_on_button_to_open_color_picker_label")
                 
                 Spacer()
             }

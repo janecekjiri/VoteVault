@@ -48,6 +48,7 @@ struct DetailView: View {
                             Text("cancel")
                                 .foregroundStyle(Color(.label))
                     })
+                    .accessibilityHint("detail_cancel_button_hint")
                 }
             }
             
@@ -61,6 +62,8 @@ struct DetailView: View {
                             Image(systemName: "trash")
                                 .tint(Color(.label))
                     })
+                    .accessibilityLabel("detail_trash_label")
+                    .accessibilityHint("detail_trash_hint")
                 }
                 
                 Button(
@@ -103,7 +106,7 @@ struct DetailView: View {
                 Text("detail_delete_alert_message")
             }
         )
-        .navigationTitle("detail_title")
+        .navigationTitle(self.viewModel.type == .new ? "detail_new_title" : "detail_edit_title")
         .navigationBarTitleDisplayMode(.inline)
     }
 }

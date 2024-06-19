@@ -15,6 +15,8 @@ struct PartyPercentagesView: View {
                 Text("percentages_title")
                     .font(.largeTitle)
                     .fontWeight(.bold)
+                    .accessibilityRemoveTraits(.isStaticText)
+                    .accessibilityAddTraits(.isHeader)
                 
                 Spacer()
             }
@@ -33,8 +35,9 @@ struct PartyPercentagesView: View {
                 )
                 .overlay {
                     RoundedRectangle(cornerRadius: 5)
-                        .stroke(Color.black, lineWidth: 1)
+                        .stroke(Color(.label), lineWidth: 1)
                 }
+                .accessibilityLabel("percentages_label")
         }
     }
 }

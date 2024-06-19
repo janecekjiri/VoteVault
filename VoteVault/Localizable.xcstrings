@@ -102,7 +102,7 @@
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Značí, zda je o koalici. Ta potřebuje překročit hranici 7%, zatímco samostatná strana pouze 5%."
+            "value" : "Značí, zda jde o koalici. Ta potřebuje překročit hranici 7%, zatímco samostatná strana pouze 5%."
           }
         },
         "en" : {
@@ -118,13 +118,45 @@
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Koaliace"
+            "value" : "Koalice"
           }
         },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Coalition"
+          }
+        }
+      }
+    },
+    "color_picker_hint" : {
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Otevře modál pro výběr barvy"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Opens color picker modal"
+          }
+        }
+      }
+    },
+    "color_picker_label" : {
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tlačítko pro výběr barvy"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Color picker button"
           }
         }
       }
@@ -161,6 +193,22 @@
         }
       }
     },
+    "detail_cancel_button_hint" : {
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zavře obrazovku a vrátí se na předchozí"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Closes the screen and returns to the previous one."
+          }
+        }
+      }
+    },
     "detail_delete_alert_message" : {
       "localizations" : {
         "cs" : {
@@ -193,18 +241,66 @@
         }
       }
     },
-    "detail_title" : {
+    "detail_edit_title" : {
       "localizations" : {
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Detail"
+            "value" : "Úprava strany"
           }
         },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Detail"
+            "value" : "Edit party"
+          }
+        }
+      }
+    },
+    "detail_new_title" : {
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vytvoření strany"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Create party"
+          }
+        }
+      }
+    },
+    "detail_trash_hint" : {
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zobrazí dialog pro smazání této strany"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Shows alert for deleting this party"
+          }
+        }
+      }
+    },
+    "detail_trash_label" : {
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Smazat stranu"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Delete party"
           }
         }
       }
@@ -289,6 +385,22 @@
         }
       }
     },
+    "party_name_label" : {
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Textové pole pro jméno politické strany"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Text field for the name of political party"
+          }
+        }
+      }
+    },
     "party_name_placeholder" : {
       "localizations" : {
         "cs" : {
@@ -333,6 +445,22 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Opens new screen to change details of this party."
+          }
+        }
+      }
+    },
+    "percentages_label" : {
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Textové pole pro procenta politické strany."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Text field for the percentages of political party."
           }
         }
       }
@@ -397,6 +525,22 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Tap on button with colors to open color picker."
+          }
+        }
+      }
+    },
+    "tap_on_button_to_open_color_picker_label" : {
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Klikněte na tlačítko s barvami pro výběr barvy. Jedná se o předchozí prvek."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tap on button with colors to open color picker. It's the previous element."
           }
         }
       }
