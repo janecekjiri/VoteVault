@@ -63,8 +63,9 @@ struct DetailView: View {
                     action: {},
                     label: {
                         Text("save")
-                            .foregroundStyle(Color(.label))
+                            .foregroundStyle(self.viewModel.isSaveButtonEnabled ? Color(.label) : Color(.systemGray4))
                 })
+                .disabled(!self.viewModel.isSaveButtonEnabled)
             }
         }
         .navigationTitle("detail_title")
