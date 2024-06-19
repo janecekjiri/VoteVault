@@ -134,7 +134,9 @@ struct DetailView: View {
             if self.viewModel.type == .new {
                 ToolbarItem(placement: .topBarLeading) {
                     Button(
-                        action: {},
+                        action: {
+                            self.dismiss()
+                        },
                         label: {
                             Text("cancel")
                                 .foregroundStyle(Color(.label))

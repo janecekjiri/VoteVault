@@ -11,6 +11,7 @@ struct HomeView: View {
     @EnvironmentObject var partyStore: PartyStore
     
     @State private var isDeleteAllAlertVisible = false
+    @State private var isDetailViewVisible = false
     
     var body: some View {
         NavigationStack {
@@ -68,6 +69,7 @@ struct HomeView: View {
                             },
                             label: {
                                 Image(systemName: "trash")
+                                    .tint(Color(.label))
                         })
                         .accessibilityElement()
                         .accessibilityValue("delete_toolbar_value")
@@ -78,11 +80,11 @@ struct HomeView: View {
                 ToolbarItem(placement: .topBarTrailing) {
                     Button(
                         action: {
-                            // TODO: Zobrazit modál k vytvoření strany
-                            self.partyStore.change()
+                            self.isDetailViewVisible = true
                         },
                         label: {
                             Image(systemName: "plus.circle")
+                                .tint(Color(.label))
                     })
                     .accessibilityElement()
                     .accessibilityValue("add_toolbar_value")
@@ -113,7 +115,16 @@ struct HomeView: View {
                     Text("alert_delete_all_parties_message")
                 }
             )
-            .tint(Color(.label))
+            .sheet(
+                isPresented: self.$isDetailViewVisible,
+                onDismiss: {
+                    self.isDetailViewVisible = false
+                },
+                content: {
+                    NavigationStack {
+                        DetailView(viewModel: DetailViewModel(model: nil))
+                    }
+            })
         }
     }
 }
