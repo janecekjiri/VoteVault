@@ -52,6 +52,7 @@
 		11B31F592C22F2A7008EC9CC /* PartyColorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartyColorView.swift; sourceTree = "<group>"; };
 		11B31F5B2C22F602008EC9CC /* PartyPercentagesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartyPercentagesView.swift; sourceTree = "<group>"; };
 		11B31F5D2C22F724008EC9CC /* PartyCoalitionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartyCoalitionView.swift; sourceTree = "<group>"; };
+		11B31F612C234D79008EC9CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +94,7 @@
 		1135F49C2C216B4400DB9E28 /* VoteVault */ = {
 			isa = PBXGroup;
 			children = (
+				11B31F612C234D79008EC9CC /* Info.plist */,
 				1135F49D2C216B4400DB9E28 /* VoteVaultApp.swift */,
 				1135F4BE2C21BB4700DB9E28 /* Views */,
 				1135F4AB2C216B5F00DB9E28 /* Screens */,
@@ -441,9 +443,9 @@
 				DEVELOPMENT_TEAM = LSX73KEXNV;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = VoteVault/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -470,9 +472,9 @@
 				DEVELOPMENT_TEAM = LSX73KEXNV;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = VoteVault/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
