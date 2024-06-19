@@ -12,6 +12,7 @@ struct DetailView: View {
     @Environment(\.dismiss) var dismiss
     @ObservedObject var viewModel: DetailViewModel
     @State private var selectedColor = Color.blue
+    @State private var isAlertVisible = false
     
     var body: some View {
         ScrollView {
@@ -54,9 +55,7 @@ struct DetailView: View {
                 if self.viewModel.type == .edit {
                     Button(
                         action: {
-                            // TODO: Přidat alert
-                            self.partyStore.removeParty(self.viewModel.model)
-                            self.dismiss()
+                            self.isAlertVisible = true
                         },
                         label: {
                             Image(systemName: "trash")
@@ -76,6 +75,34 @@ struct DetailView: View {
                 .disabled(!self.viewModel.isSaveButtonEnabled)
             }
         }
+        .alert(
+            "detail_delete_alert_title",
+            isPresented: self.$isAlertVisible,
+            actions: {
+                Button(
+                    action: {
+                        self.isAlertVisible = false
+                    },
+                    label: {
+                        Text("no")
+                    }
+                )
+                
+                Button(
+                    action: {
+                        self.isAlertVisible = false
+                        self.partyStore.removeParty(self.viewModel.model)
+                        self.dismiss()
+                    },
+                    label: {
+                        Text("yes")
+                    }
+                )
+            },
+            message: {
+                Text("detail_delete_alert_message")
+            }
+        )
         .navigationTitle("detail_title")
         .navigationBarTitleDisplayMode(.inline)
     }

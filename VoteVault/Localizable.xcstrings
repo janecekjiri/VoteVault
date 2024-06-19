@@ -161,6 +161,38 @@
         }
       }
     },
+    "detail_delete_alert_message" : {
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tato akce je nevratná."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "This action cannot be undone."
+          }
+        }
+      }
+    },
+    "detail_delete_alert_title" : {
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Přejete si smazat tuto stranu?"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Do you wish to delete this party?"
+          }
+        }
+      }
+    },
     "detail_title" : {
       "localizations" : {
         "cs" : {
@@ -295,6 +327,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Otevře obrazovku na úpravu dat v tomto záznamu."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Opens new screen to change details of this party."
           }
         }
       }
