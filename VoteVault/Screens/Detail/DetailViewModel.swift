@@ -33,7 +33,7 @@ final class DetailViewModel: ObservableObject {
         Publishers.CombineLatest(self.model.$name, self.model.$percents)
             .receive(on: RunLoop.main)
             .map { name, percents in
-                return !name.isEmpty && percents > 0.0
+                return !name.isEmpty && percents ?? 0.0 > 0.0
             }
             .assign(to: \.isSaveButtonEnabled, on: self)
             .store(in: &cancellableSet)

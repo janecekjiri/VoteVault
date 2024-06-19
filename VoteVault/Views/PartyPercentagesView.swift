@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct PartyPercentagesView: View {
-    @Binding var value: Double
+    @Binding var value: Double?
     var body: some View {
         VStack {
             HStack {
@@ -30,7 +30,7 @@ struct PartyPercentagesView: View {
                 .padding(.vertical, 12)
                 .padding(.horizontal, 10)
                 .background(
-                    RoundedRectangle(cornerRadius: 5)
+                    RoundedRectangle(cornerRadius: 50)
                         .foregroundStyle(Color(.systemGray6))
                 )
                 .overlay {
@@ -43,5 +43,6 @@ struct PartyPercentagesView: View {
 }
 
 #Preview {
-    PartyPercentagesView(value: .constant(15.8))
+    @State var value: Double?
+    return PartyPercentagesView(value: $value)
 }

@@ -14,15 +14,15 @@ final class PartyModel: ObservableObject, Hashable {
     }
     
     @Published var name: String
-    @Published var percents: Double
+    @Published var percents: Double?
     @Published var color = Color.blue
     @Published var isCoaliton = false
     
     var formattedPercentsValue: String {
-        return self.percents.formatted(.number.precision(.fractionLength(0...1)))
+        return (self.percents ?? 0.0).formatted(.number.precision(.fractionLength(0...1)))
     }
     
-    init(name: String = "", percents: Double = 0.0, color: Color = .blue, isCoaliton: Bool = false) {
+    init(name: String = "", percents: Double? = nil, color: Color = .blue, isCoaliton: Bool = false) {
         self.name = name
         self.percents = percents
         self.color = color
