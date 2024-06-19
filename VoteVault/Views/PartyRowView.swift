@@ -8,12 +8,12 @@
 import SwiftUI
 
 struct PartyRowView: View {
-    private let model: PartyModel
+    @ObservedObject private var model: PartyModel
     
     var body: some View {
         GeometryReader { geometry in
             HStack {
-                Text(self.model.name ?? "")
+                Text(self.model.name)
                     .font(.largeTitle)
                     .fontWeight(.bold)
                 
@@ -41,7 +41,7 @@ struct PartyRowView: View {
             )
             .accessibilityElement()
             .accessibilityAddTraits(.isButton)
-            .accessibilityValue("\(self.model.name ?? "") \(self.model.formattedPercentsValue) party_row_value")
+            .accessibilityValue("\(self.model.name) \(self.model.formattedPercentsValue) party_row_value")
             .accessibilityHint("party_row_hint")
         }
     }

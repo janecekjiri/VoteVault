@@ -8,7 +8,7 @@
 import Foundation
 
 final class PartyStore: ObservableObject {
-    @Published var parties: [PartyModel] = []
+    @Published private(set) var parties: [PartyModel] = []
     private(set) var isPercentageSumCorrect = true
     
     private var partiesInternal: [PartyModel] = [] {
@@ -19,7 +19,19 @@ final class PartyStore: ObservableObject {
     }
     
     func deleteAll() {
-        self.parties.removeAll()
+        self.partiesInternal.removeAll()
+    }
+    
+    func addParty(_ party: PartyModel) {
+        if let index = self.partiesInternal.firstIndex(where: { $0.name == party.name }) {
+            self.partiesInternal[index] = party
+        } else {
+            self.partiesInternal.append(party)
+        }
+    }
+    
+    func removeParty(_ party: PartyModel) {
+        self.partiesInternal.removeAll { $0.name == party.name }
     }
     
     // MARK: - For development purposes

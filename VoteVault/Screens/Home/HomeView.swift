@@ -55,7 +55,7 @@ struct HomeView: View {
                         .accessibilityHint("evaluate_hint")
                     }
                     .navigationDestination(for: PartyModel.self) { party in
-                        DetailView(viewModel: DetailViewModel(model: party))
+                        DetailView(viewModel: DetailViewModel(model: party)).environmentObject(self.partyStore)
                     }
                 }
             }
@@ -122,7 +122,7 @@ struct HomeView: View {
                 },
                 content: {
                     NavigationStack {
-                        DetailView(viewModel: DetailViewModel(model: nil))
+                        DetailView(viewModel: DetailViewModel(model: nil)).environmentObject(self.partyStore)
                     }
             })
         }

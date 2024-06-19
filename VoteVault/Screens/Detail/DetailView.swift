@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct DetailView: View {
+    @EnvironmentObject var partyStore: PartyStore
     @Environment(\.dismiss) var dismiss
     @ObservedObject var viewModel: DetailViewModel
     @State private var selectedColor = Color.blue
@@ -52,7 +53,11 @@ struct DetailView: View {
             ToolbarItemGroup(placement: .topBarTrailing) {
                 if self.viewModel.type == .edit {
                     Button(
-                        action: {},
+                        action: {
+                            // TODO: Přidat alert
+                            self.partyStore.removeParty(self.viewModel.model)
+                            self.dismiss()
+                        },
                         label: {
                             Image(systemName: "trash")
                                 .tint(Color(.label))
@@ -60,7 +65,10 @@ struct DetailView: View {
                 }
                 
                 Button(
-                    action: {},
+                    action: {
+                        self.partyStore.addParty(self.viewModel.model)
+                        self.dismiss()
+                    },
                     label: {
                         Text("save")
                             .foregroundStyle(self.viewModel.isSaveButtonEnabled ? Color(.label) : Color(.systemGray4))
@@ -74,5 +82,5 @@ struct DetailView: View {
 }
 
 #Preview {
-    DetailView(viewModel: DetailViewModel(model: nil))
+    DetailView(viewModel: DetailViewModel(model: nil)).environmentObject(PartyStore())
 }
