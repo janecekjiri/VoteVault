@@ -97,6 +97,12 @@
         }
       }
     },
+    "chart_mandates_label" : {
+
+    },
+    "chart_party_label" : {
+
+    },
     "coalition_description" : {
       "localizations" : {
         "cs" : {
@@ -496,6 +502,9 @@
           }
         }
       }
+    },
+    "results_title" : {
+
     },
     "save" : {
       "localizations" : {

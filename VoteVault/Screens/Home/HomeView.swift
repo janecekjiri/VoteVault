@@ -12,6 +12,7 @@ struct HomeView: View {
     
     @State private var isDeleteAllAlertVisible = false
     @State private var isDetailViewVisible = false
+    @State private var isResultsModalVisible = false
     
     var body: some View {
         NavigationStack {
@@ -38,7 +39,7 @@ struct HomeView: View {
                     .safeAreaInset(edge: .bottom) {
                         Button(
                             action: {
-                                // TODO: Vyhodnotit
+                                self.isResultsModalVisible = true
                             },
                             label: {
                                 Text("evaluate")
@@ -123,6 +124,16 @@ struct HomeView: View {
                 content: {
                     NavigationStack {
                         DetailView(viewModel: DetailViewModel(model: nil)).environmentObject(self.partyStore)
+                    }
+            })
+            .fullScreenCover(
+                isPresented: self.$isResultsModalVisible,
+                onDismiss: {
+                    self.isResultsModalVisible = false
+                },
+                content: {
+                    NavigationStack {
+                        ResultsView().environmentObject(self.partyStore)
                     }
             })
         }

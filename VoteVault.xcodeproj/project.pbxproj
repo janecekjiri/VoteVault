@@ -16,6 +16,8 @@
 		1135F4B72C21A93800DB9E28 /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1135F4B62C21A93800DB9E28 /* DetailViewModel.swift */; };
 		1135F4B92C21AAD200DB9E28 /* PartyStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1135F4B82C21AAD200DB9E28 /* PartyStore.swift */; };
 		1135F4C02C21BB5000DB9E28 /* PartyRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1135F4BF2C21BB5000DB9E28 /* PartyRowView.swift */; };
+		119594362C27F07B000C6104 /* ResultsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 119594352C27F07B000C6104 /* ResultsView.swift */; };
+		119594382C27F3AC000C6104 /* ResultsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 119594372C27F3AC000C6104 /* ResultsViewModel.swift */; };
 		11A9A9A72C22084A00DD5317 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 11A9A9A62C22084A00DD5317 /* Localizable.xcstrings */; };
 		11A9A9B82C22153A00DD5317 /* PartyStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A9A9B72C22153A00DD5317 /* PartyStoreTests.swift */; };
 		11B31F582C22E22B008EC9CC /* PartyNameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B31F572C22E22B008EC9CC /* PartyNameView.swift */; };
@@ -45,6 +47,8 @@
 		1135F4B62C21A93800DB9E28 /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
 		1135F4B82C21AAD200DB9E28 /* PartyStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartyStore.swift; sourceTree = "<group>"; };
 		1135F4BF2C21BB5000DB9E28 /* PartyRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartyRowView.swift; sourceTree = "<group>"; };
+		119594352C27F07B000C6104 /* ResultsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsView.swift; sourceTree = "<group>"; };
+		119594372C27F3AC000C6104 /* ResultsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewModel.swift; sourceTree = "<group>"; };
 		11A9A9A62C22084A00DD5317 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		11A9A9AE2C22150F00DD5317 /* VoteVaultTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VoteVaultTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		11A9A9B72C22153A00DD5317 /* PartyStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartyStoreTests.swift; sourceTree = "<group>"; };
@@ -145,6 +149,8 @@
 		1135F4AE2C216B6F00DB9E28 /* Results */ = {
 			isa = PBXGroup;
 			children = (
+				119594352C27F07B000C6104 /* ResultsView.swift */,
+				119594372C27F3AC000C6104 /* ResultsViewModel.swift */,
 			);
 			path = Results;
 			sourceTree = "<group>";
@@ -281,6 +287,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1135F4B92C21AAD200DB9E28 /* PartyStore.swift in Sources */,
+				119594362C27F07B000C6104 /* ResultsView.swift in Sources */,
 				1135F4B02C216B8300DB9E28 /* HomeView.swift in Sources */,
 				11B31F582C22E22B008EC9CC /* PartyNameView.swift in Sources */,
 				1135F4B22C217F8000DB9E28 /* DetailView.swift in Sources */,
@@ -289,6 +296,7 @@
 				11B31F5A2C22F2A7008EC9CC /* PartyColorView.swift in Sources */,
 				1135F4C02C21BB5000DB9E28 /* PartyRowView.swift in Sources */,
 				11B31F5C2C22F602008EC9CC /* PartyPercentagesView.swift in Sources */,
+				119594382C27F3AC000C6104 /* ResultsViewModel.swift in Sources */,
 				1135F4B72C21A93800DB9E28 /* DetailViewModel.swift in Sources */,
 				1135F49E2C216B4400DB9E28 /* VoteVaultApp.swift in Sources */,
 			);
