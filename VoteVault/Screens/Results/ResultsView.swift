@@ -36,6 +36,10 @@ struct ResultsView: View {
                         Image(systemName: "arrow.right.circle")
                     }
                     .foregroundStyle(Color(.label))
+                    .accessibilityElement()
+                    .accessibilityLabel("results_explanation_button")
+                    .accessibilityAddTraits(.isButton)
+                    .accessibilityHint("results_explanation_button_hint")
             })
             .frame(height: 50)
         })

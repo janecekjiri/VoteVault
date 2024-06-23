@@ -374,7 +374,7 @@
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Jelikož se se volbách bojuje o 200 mandátů, správně byste očekávali, že součet mandátů všech stran je roven 200. Nicméně, tato situace zřejmě nikdy nenastane. Proč?\n\nBohužel, výpočet počtu mandátů  není ani zdaleka přímočarý. Samozřejmě, že počet mandátů nejvíce ovlivňuje, kolik procent daná strana (či koalice) dostala. To je ovšem také ovlivněno tím, jak si vede ve specifických krajích. Takto například v roce 2021 získalo nejvíce mandátů ANO (72), ačkoliv nejvíce hlasů dostala koalice SPOLU (71).\n\nPolitolog a volební expert Daniel Kerekes dokonce přišel s tím, že kdyby koalice SPOLU v Jihočeském kraji získala o 3857 až 6003 hlasů méně, měla by 72 mandátů, zatímco ANO by si o 1 mandát pohoršilo.\n\nJelikož naše výpočty pracují pouze s velmi omezeným množstvím dat, počet mandátů počítáme dle následujícího vzorce:\n\n(200 * podpora strany v procentech) / součet podpory všech stran, které by se do PS dostaly"
+            "value" : "Jelikož se ve volbách bojuje o 200 mandátů, správně byste očekávali, že součet mandátů všech stran je roven 200. Nicméně, tato situace zřejmě nikdy nenastane. Proč?\n\nBohužel, výpočet počtu mandátů  není ani zdaleka přímočarý. Samozřejmě, že počet mandátů nejvíce ovlivňuje, kolik procent daná strana (či koalice) dostala. To je ovšem také ovlivněno tím, jak si vede ve specifických krajích. Takto například v roce 2021 získalo nejvíce mandátů ANO (72), ačkoliv nejvíce hlasů dostala koalice SPOLU (71).\n\nPolitolog a volební expert Daniel Kerekes dokonce přišel s tím, že kdyby koalice SPOLU v Jihočeském kraji získala o 3857 až 6003 hlasů méně, měla by 72 mandátů, zatímco ANO by si o 1 mandát pohoršilo.\n\nJelikož naše výpočty pracují pouze s velmi omezeným množstvím dat, počet mandátů počítáme dle následujícího vzorce:\n\n(200 * podpora strany v procentech) / součet podpory všech stran, které by se do PS dostaly"
           }
         },
         "en" : {
@@ -557,6 +557,22 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Why don't seats add up to 200?"
+          }
+        }
+      }
+    },
+    "results_explanation_button_hint" : {
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Otevře obrazovku vysvětlující volební systém v Česku a naše kalkulace."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Opens new screen explaining Czech voting system and our calculations."
           }
         }
       }
