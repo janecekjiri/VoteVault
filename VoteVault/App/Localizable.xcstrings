@@ -17,6 +17,38 @@
         }
       }
     },
+    "%@ chart_label" : {
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Strana %@"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Party %@"
+          }
+        }
+      }
+    },
+    "%lld chart_value" : {
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld mandátů"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld seats"
+          }
+        }
+      }
+    },
     "add_toolbar_hint" : {
       "localizations" : {
         "cs" : {

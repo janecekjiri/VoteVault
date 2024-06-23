@@ -23,6 +23,8 @@ struct ResultsView: View {
                         Text(verbatim: "\(party.seats)")
                             .foregroundStyle(Color(.label))
                     }
+                    .accessibilityLabel("\(party.name) chart_label")
+                    .accessibilityValue("\(party.seats) chart_value")
             }
         }
         .safeAreaInset(edge: .bottom, content: {
