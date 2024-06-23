@@ -58,7 +58,7 @@
 		11B31F592C22F2A7008EC9CC /* PartyColorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartyColorView.swift; sourceTree = "<group>"; };
 		11B31F5B2C22F602008EC9CC /* PartyPercentagesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartyPercentagesView.swift; sourceTree = "<group>"; };
 		11B31F5D2C22F724008EC9CC /* PartyCoalitionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartyCoalitionView.swift; sourceTree = "<group>"; };
-		11B31F612C234D79008EC9CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		11B31F612C234D79008EC9CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,14 +100,12 @@
 		1135F49C2C216B4400DB9E28 /* VoteVault */ = {
 			isa = PBXGroup;
 			children = (
-				11B31F612C234D79008EC9CC /* Info.plist */,
-				1135F49D2C216B4400DB9E28 /* VoteVaultApp.swift */,
+				1195943C2C28314C000C6104 /* App */,
 				1135F4BE2C21BB4700DB9E28 /* Views */,
 				1135F4AB2C216B5F00DB9E28 /* Screens */,
 				1135F4B32C21A7E900DB9E28 /* Models */,
 				1135F4A12C216B4500DB9E28 /* Assets.xcassets */,
 				1135F4A32C216B4500DB9E28 /* Preview Content */,
-				11A9A9A62C22084A00DD5317 /* Localizable.xcstrings */,
 			);
 			path = VoteVault;
 			sourceTree = "<group>";
@@ -184,6 +182,16 @@
 				119594392C2812F8000C6104 /* ExplanationView.swift */,
 			);
 			path = Explanation;
+			sourceTree = "<group>";
+		};
+		1195943C2C28314C000C6104 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				11A9A9A62C22084A00DD5317 /* Localizable.xcstrings */,
+				1135F49D2C216B4400DB9E28 /* VoteVaultApp.swift */,
+				11B31F612C234D79008EC9CC /* Info.plist */,
+			);
+			path = App;
 			sourceTree = "<group>";
 		};
 		11A9A9AF2C22150F00DD5317 /* VoteVaultTests */ = {
@@ -463,7 +471,7 @@
 				DEVELOPMENT_TEAM = LSX73KEXNV;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = VoteVault/Info.plist;
+				INFOPLIST_FILE = VoteVault/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -492,7 +500,7 @@
 				DEVELOPMENT_TEAM = LSX73KEXNV;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = VoteVault/Info.plist;
+				INFOPLIST_FILE = VoteVault/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
