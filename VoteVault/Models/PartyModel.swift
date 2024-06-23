@@ -20,7 +20,7 @@ final class PartyModel: ObservableObject, Hashable {
     var seats = 0
     
     var formattedPercentsValue: String {
-        return (self.percents ?? 0.0).formatted(.number.precision(.fractionLength(0...1)))
+        return (self.percents ?? 0.0).formatted(.number.precision(.fractionLength(0...2)))
     }
     
     init(name: String = "", percents: Double? = nil, color: Color = .blue, isCoaliton: Bool = false) {

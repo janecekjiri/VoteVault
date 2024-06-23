@@ -30,7 +30,7 @@ struct PartyRowView: View {
                         .font(.title2)
                         .fontWeight(.semibold)
                 }
-                .frame(width: geometry.size.width * 0.25)
+                .frame(width: geometry.size.width * 0.3)
             }
             .padding(.horizontal, 10)
             .padding(.vertical, 5)
@@ -52,5 +52,11 @@ struct PartyRowView: View {
 }
 
 #Preview {
-    PartyRowView(model: PartyModel(name: "ODS", percents: 15.7, color: .black, isCoaliton: false))
+    List {
+        PartyRowView(model: PartyModel(name: "ABC", percents: 69.69, color: .blue, isCoaliton: false))
+            .listRowInsets(.init(top: 0, leading: 0, bottom: 0, trailing: 0))
+            .listSectionSeparator(.hidden)
+    }
+    .listStyle(.plain)
+    .padding(.horizontal, 20)
 }
