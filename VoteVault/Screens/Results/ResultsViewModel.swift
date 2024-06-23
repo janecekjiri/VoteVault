@@ -23,10 +23,10 @@ final class ResultsViewModel: ObservableObject {
         let sumPercentages = finalParties.compactMap { $0.percents }.reduce(0.0, +)
         
         finalParties.forEach { party in
-            party.mandates = Int(200.0 * (party.percents ?? 0.0) / sumPercentages)
+            party.seats = Int(200.0 * (party.percents ?? 0.0) / sumPercentages)
         }
         
-        finalParties.sort { $0.mandates > $1.mandates }
+        finalParties.sort { $0.seats > $1.seats }
         
         self.finalParties = finalParties
     }

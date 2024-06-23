@@ -97,11 +97,37 @@
         }
       }
     },
-    "chart_mandates_label" : {
-
-    },
     "chart_party_label" : {
-
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Strana"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Party"
+          }
+        }
+      }
+    },
+    "chart_seats_label" : {
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mandáty"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Seats"
+          }
+        }
+      }
     },
     "coalition_description" : {
       "localizations" : {
@@ -343,6 +369,22 @@
         }
       }
     },
+    "explanation_text" : {
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Jelikož se se volbách bojuje o 200 mandátů, správně byste očekávali, že součet mandátů všech stran je roven 200. Nicméně, tato situace zřejmě nikdy nenastane. Proč?\n\nBohužel, výpočet počtu mandátů  není ani zdaleka přímočarý. Samozřejmě, že počet mandátů nejvíce ovlivňuje, kolik procent daná strana (či koalice) dostala. To je ovšem také ovlivněno tím, jak si vede ve specifických krajích. Takto například v roce 2021 získalo nejvíce mandátů ANO (72), ačkoliv nejvíce hlasů dostala koalice SPOLU (71).\n\nPolitolog a volební expert Daniel Kerekes dokonce přišel s tím, že kdyby koalice SPOLU v Jihočeském kraji získala o 3857 až 6003 hlasů méně, měla by 72 mandátů, zatímco ANO by si o 1 mandát pohoršilo.\n\nJelikož naše výpočty pracují pouze s velmi omezeným množstvím dat, počet mandátů počítáme dle následujícího vzorce:\n\n(200 * podpora strany v procentech) / součet podpory všech stran, které by se do PS dostaly"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Since there are 200 seats in Chamber of Deputies of the Czech Republic, you would rightly assume that seats of all parties add up to 200. However, that will most likely never be the case. How so?\n\nUnfortunately, the calculations for how many seats each party gets is not that straightforward. Of course the number of seats each party (or coalition) gets is highly dependent on how many percents of all votes they have. However, party's result in a specific region also plays a big role. That's why in 2021, despite coalition having the most votes (which resulted into 71 seats), ANO had the most seats (72).\n\nTo further demonstrate how the current system is complicated, election expert Daniel Kerekes calculated that had SPOLU had gotten 3857-6003 less votes in South Bohemian Region, they would have had 72 seats while ANO would have dropped to 71.\n\nSince in our calculations we can only work with a very limited data set, the seats are calculated like this:\n\n(200 * party's support in percents) / total sum of percents of all parties that passed the minimal threshold"
+          }
+        }
+      }
+    },
     "home_view_empty_message" : {
       "localizations" : {
         "cs" : {
@@ -503,8 +545,37 @@
         }
       }
     },
+    "results_explanation_button" : {
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Proč není počet mandátů roven 200?"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Why don't seats add up to 200?"
+          }
+        }
+      }
+    },
     "results_title" : {
-
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Výsledky"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Results"
+          }
+        }
+      }
     },
     "save" : {
       "localizations" : {

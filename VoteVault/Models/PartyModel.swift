@@ -17,7 +17,7 @@ final class PartyModel: ObservableObject, Hashable {
     @Published var percents: Double?
     @Published var color = Color.blue
     @Published var isCoaliton = false
-    var mandates = 0
+    var seats = 0
     
     var formattedPercentsValue: String {
         return (self.percents ?? 0.0).formatted(.number.precision(.fractionLength(0...1)))
@@ -35,6 +35,6 @@ final class PartyModel: ObservableObject, Hashable {
         hasher.combine(self.percents)
         hasher.combine(self.color)
         hasher.combine(self.isCoaliton)
-        hasher.combine(self.mandates)
+        hasher.combine(self.seats)
     }
 }
