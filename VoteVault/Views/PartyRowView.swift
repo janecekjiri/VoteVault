@@ -34,7 +34,6 @@ struct PartyRowView: View {
             }
             .padding(.horizontal, 10)
             .padding(.vertical, 5)
-            // note: takto udělané pozadí? smart! :)
             .background(
                 RoundedRectangle(cornerRadius: 5)
                     .foregroundStyle(Color(.systemGray6))

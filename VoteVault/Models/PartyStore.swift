@@ -34,7 +34,7 @@ final class PartyStore: ObservableObject {
         self.partiesInternal.removeAll { $0.name == party.name }
     }
     
-    // MARK: - For development purposes
+    // MARK: - For development and testing purposes
     
     var isA = true
     

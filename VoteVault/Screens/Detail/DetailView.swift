@@ -8,30 +8,21 @@
 import SwiftUI
 
 struct DetailView: View {
-    @EnvironmentObject var partyStore: PartyStore
     @Environment(\.dismiss) var dismiss
+    @EnvironmentObject var partyStore: PartyStore
     @ObservedObject var viewModel: DetailViewModel
+    
     @State private var selectedColor = Color.blue
     @State private var isAlertVisible = false
     
     var body: some View {
         ScrollView {
-            VStack(spacing: 0) {
+            VStack(spacing: 20) {
                 PartyNameView(partyName: self.$viewModel.model.name)
-                
-                // Additional spacing of 10
-                Spacer()
-                    .frame(height: 20)
                 
                 PartyColorView(selectedColor: self.$viewModel.model.color)
                 
-                Spacer()
-                    .frame(height: 20)
-                
                 PartyPercentagesView(value: self.$viewModel.model.percents)
-                
-                Spacer()
-                    .frame(height: 20)
                 
                 PartyCoalitionView(isOn: self.$viewModel.model.isCoaliton)
             }

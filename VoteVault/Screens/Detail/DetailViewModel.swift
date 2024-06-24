@@ -9,9 +9,9 @@ import Combine
 import Foundation
 
 enum DetailType {
-    /// Vytváříme novou stranu
+    /// Creating new party
     case new
-    /// Upravujeme již existující stranu
+    /// Updating an already existing party
     case edit
 }
 
