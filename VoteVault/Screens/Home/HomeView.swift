@@ -50,7 +50,6 @@ struct HomeView: View {
                                     .frame(maxWidth: .infinity)
                                     .background(self.partyStore.isPercentageSumCorrect ? Color.blue : Color(.systemGray6))
                                     .clipShape(.capsule)
-                                // note: měl jsem zřejmě špatné pořadí modifikátorů
                         })
                         .disabled(!self.partyStore.isPercentageSumCorrect)
                         .accessibilityHint("evaluate_hint")
