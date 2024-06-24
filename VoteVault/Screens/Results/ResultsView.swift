@@ -17,14 +17,17 @@ struct ResultsView: View {
     var body: some View {
         Chart {
             ForEach(self.viewModel.finalParties, id: \.name) { party in
-                BarMark(x: .value("chart_party_label", party.name), y: .value("chart_seats_label", party.seats))
-                    .foregroundStyle(party.color)
-                    .annotation {
-                        Text(verbatim: "\(party.seats)")
-                            .foregroundStyle(Color(.label))
-                    }
-                    .accessibilityLabel("\(party.name) chart_label")
-                    .accessibilityValue("\(party.seats) chart_value")
+                BarMark(
+                    x: .value("chart_party_label", party.name),
+                    y: .value("chart_seats_label", party.seats)
+                )
+                .foregroundStyle(party.color)
+                .annotation {
+                    Text(verbatim: "\(party.seats)")
+                        .foregroundStyle(Color(.label))
+                }
+                .accessibilityLabel("\(party.name) chart_label")
+                .accessibilityValue("\(party.seats) chart_value")
             }
         }
         .safeAreaInset(edge: .bottom, content: {
