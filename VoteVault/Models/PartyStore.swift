@@ -36,18 +36,6 @@ final class PartyStore: ObservableObject {
     
     // MARK: - For development and testing purposes
     
-    var isA = true
-    
-    func change() {
-        if self.isA {
-            self.assignB()
-        } else {
-            self.assignA()
-        }
-        
-        self.isA.toggle()
-    }
-    
     func assignA() {
         self.partiesInternal = [
             PartyModel(name: "ODS", percents: 12.9, color: .blue, isCoaliton: false),
