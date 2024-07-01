@@ -22,17 +22,23 @@ struct HomeView: View {
                         .font(.title3)
                         .fontWeight(.semibold)
                 } else {
-                    List(self.partyStore.parties, id: \.name) { party in
-                        ZStack {
-                            PartyRowView(model: party)
-                            
-                            NavigationLink(value: party) {
-                                EmptyView()
+                    List {
+                        ForEach(self.partyStore.parties) { party in
+                            ZStack {
+                                PartyRowView(model: party)
+                                
+                                NavigationLink(value: party) {
+                                    EmptyView()
+                                }
+                                .opacity(0)
                             }
-                            .opacity(0)
+                            .listRowSeparator(.visible)
+                            .listRowSeparatorTint(.white)
+                            .listRowInsets(.init(top: 0, leading: 0, bottom: 0, trailing: 0))
                         }
-                        .listRowSeparator(.hidden)
-                        .listRowInsets(.init(top: 0, leading: 0, bottom: 0, trailing: 0))
+                        .onDelete { indexSet in
+                            // TODO
+                        }
                     }
                     .listStyle(.plain)
                     .listRowSpacing(10)
@@ -141,7 +147,7 @@ struct HomeView: View {
 
 #Preview {
     let partyStore = PartyStore()
-    partyStore.addParty(PartyModel(name: "ODS", percents: 15, color: .blue, isCoaliton: false))
-    partyStore.addParty(PartyModel(name: "ANO", percents: 35, color: .purple, isCoaliton: false))
+    partyStore.addParty(PartyModel(name: "ABC", percents: 15, color: .blue, isCoaliton: false))
+    partyStore.addParty(PartyModel(name: "XYZ", percents: 35, color: .purple, isCoaliton: false))
     return HomeView().environmentObject(partyStore)
 }

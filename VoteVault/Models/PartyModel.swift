@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 
-final class PartyModel: ObservableObject, Hashable {
+final class PartyModel: ObservableObject, Hashable, Identifiable {
     static func == (lhs: PartyModel, rhs: PartyModel) -> Bool {
         return lhs.name == rhs.name
     }

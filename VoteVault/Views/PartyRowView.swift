@@ -11,38 +11,36 @@ struct PartyRowView: View {
     @ObservedObject private var model: PartyModel
     
     var body: some View {
-        GeometryReader { geometry in
+        HStack {
+            Text(self.model.name)
+                .font(.largeTitle)
+                .fontWeight(.bold)
+            
+            Spacer(minLength: 10)
+            
+            RoundedRectangle(cornerRadius: 5)
+                .frame(width: 30, height: 30)
+                .foregroundStyle(self.model.color)
+            
             HStack {
-                Text(self.model.name)
-                    .font(.largeTitle)
-                    .fontWeight(.bold)
+                Spacer()
                 
-                Spacer(minLength: 10)
-                
-                RoundedRectangle(cornerRadius: 5)
-                    .frame(width: 30, height: 30)
-                    .foregroundStyle(self.model.color)
-                
-                HStack {
-                    Spacer()
-                    
-                    Text(verbatim: "\(self.model.formattedPercentsValue)%")
-                        .font(.title2)
-                        .fontWeight(.semibold)
-                }
-                .frame(width: geometry.size.width * 0.3)
+                Text(verbatim: "\(self.model.formattedPercentsValue)%")
+                    .font(.title2)
+                    .fontWeight(.semibold)
             }
-            .padding(.horizontal, 10)
-            .padding(.vertical, 5)
-            .background(
-                RoundedRectangle(cornerRadius: 5)
-                    .foregroundStyle(Color(.systemGray6))
-            )
-            .accessibilityElement()
-            .accessibilityAddTraits(.isButton)
-            .accessibilityValue("\(self.model.name) \(self.model.formattedPercentsValue) party_row_value")
-            .accessibilityHint("party_row_hint")
+            .containerRelativeFrame(.horizontal, count: 10, span: 3, spacing: 0)
         }
+        .padding(.horizontal, 10)
+        .padding(.vertical, 5)
+        .background(
+            RoundedRectangle(cornerRadius: 5)
+                .foregroundStyle(Color(.systemGray6))
+        )
+        .accessibilityElement()
+        .accessibilityAddTraits(.isButton)
+        .accessibilityValue("\(self.model.name) \(self.model.formattedPercentsValue) party_row_value")
+        .accessibilityHint("party_row_hint")
     }
     
     init(model: PartyModel) {
