@@ -140,5 +140,8 @@ struct HomeView: View {
 }
 
 #Preview {
-    HomeView().environmentObject(PartyStore())
+    let partyStore = PartyStore()
+    partyStore.addParty(PartyModel(name: "ODS", percents: 15, color: .blue, isCoaliton: false))
+    partyStore.addParty(PartyModel(name: "ANO", percents: 35, color: .purple, isCoaliton: false))
+    return HomeView().environmentObject(partyStore)
 }
