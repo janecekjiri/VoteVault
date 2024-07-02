@@ -32,8 +32,7 @@ struct HomeView: View {
                                 }
                                 .opacity(0)
                             }
-                            .listRowSeparator(.visible)
-                            .listRowSeparatorTint(.white)
+                            .listRowSeparator(.hidden)
                             .listRowInsets(.init(top: 0, leading: 0, bottom: 0, trailing: 0))
                         }
                         .onDelete { indexSet in
