@@ -18,7 +18,7 @@ final class ResultsViewModel: ObservableObject {
     
     private func calculate() {
         // Filter out parties below the minimal treshhold
-        var finalParties = self.parties.filter { $0.percents ?? 0.0 > ($0.isCoaliton ? 7.0 : 5.0) }
+        var finalParties = self.parties.filter { $0.percents ?? 0.0 >= ($0.isCoaliton ? 7.0 : 5.0) }
         
         // Total sum of percentages
         let sumPercentages = finalParties.compactMap { $0.percents }.reduce(0.0, +)

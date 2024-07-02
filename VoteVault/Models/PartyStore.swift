@@ -33,4 +33,8 @@ final class PartyStore: ObservableObject {
     func removeParty(_ party: PartyModel) {
         self.partiesInternal.removeAll { $0.name == party.name }
     }
+    
+    func removeParty(atOffsets indexSet: IndexSet) {
+        self.partiesInternal.remove(atOffsets: indexSet)
+    }
 }
